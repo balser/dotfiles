@@ -7,10 +7,11 @@
 	ss = status -sb
 	s  = status
 [color "status"]
-	branch    = bold magenta
-	added     = green
-	changed   = yellow
-	untracked = blue
+	localbranch  = bold magenta
+	remotebranch = bold cyan
+	added        = green
+	changed      = yellow
+	untracked    = blue
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
