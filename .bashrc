@@ -4,6 +4,9 @@ case $- in
       *) return;;
 esac
 
+export GOPATH=$HOME
+export PATH=$PATH:$GOPATH/bin
+
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 HISTSIZE=10000
@@ -83,6 +86,8 @@ if ! shopt -oq posix; then
 fi
 
 export EDITOR=/usr/bin/vim
+export VIM_UNDO=~/.vim/undo
+[ -d $VIM_UNDO ] || mkdir -p $VIM_UNDO
 
 # use a vi-style command line editing interface
 set -o vi
