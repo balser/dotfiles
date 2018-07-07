@@ -7,6 +7,8 @@ call plug#end()
 
 syntax on
 filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
 set undodir=$VIM_UNDO
 set undofile
 set relativenumber number
