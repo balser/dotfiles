@@ -6,7 +6,18 @@ if [ ! -f $HOME/.git-prompt.sh ]; then
   read -r response
   if [ "$response" = "Y" ] || [ "$response" = "y" ]; then
     cd "$HOME" || exit 1
-    curl -fsSLO https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+    curl -fsSL https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o .git-prompt.sh
+    cd - || exit 1
+  fi
+fi
+
+if [ ! -f $HOME/.git-completion.bash ]; then
+  echo "Git bash completion is not installed."
+  printf "Install git bash completion? (Y/N) "
+  read -r response
+  if [ "$response" = "Y" ] || [ "$response" = "y" ]; then
+    cd "$HOME" || exit 1
+    curl -fsSL https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o .git-completion.bash
     cd - || exit 1
   fi
 fi

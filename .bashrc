@@ -35,7 +35,7 @@ case "$TERM" in
 esac
 
 # See: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-. "$HOME/git-prompt.sh"
+. "$HOME/.git-prompt.sh"
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="verbose"
@@ -85,6 +85,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+. "$HOME/.git-completion.bash"
 
 export EDITOR=/usr/bin/vim
 export VIM_UNDO=~/.vim/undo
