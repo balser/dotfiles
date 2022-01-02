@@ -34,8 +34,11 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# See: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+# source git bash completion and prompt support
+. "$HOME/.git-completion.bash"
 . "$HOME/.git-prompt.sh"
+
+# See: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="verbose"
@@ -77,16 +80,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# enable programmable completion features
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-. "$HOME/.git-completion.bash"
 
 export EDITOR=/opt/homebrew/bin/vim
 export VIM_UNDO=~/.vim/undo
@@ -95,8 +88,6 @@ export VIM_UNDO=~/.vim/undo
 # use a vi-style command line editing interface
 set -o vi
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
 alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
