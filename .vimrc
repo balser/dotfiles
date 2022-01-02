@@ -30,8 +30,5 @@ hi CursorLine term=bold cterm=bold ctermbg=darkgrey guibg=Grey40
 " toggle numbers display
 nnoremap <C-n> :set norelativenumber! nonumber!<CR>
 
-" yank/put using clipboard
-set clipboard=unnamedplus
-
 " fatih/vim-go
 let g:go_fmt_command = "goimports"
