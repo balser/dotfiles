@@ -1,5 +1,16 @@
 #!/bin/sh
 
+if [ ! -f $HOME/.git-prompt.sh ]; then
+  echo "Git prompt support is not installed."
+  printf "Install git prompt support? (Y/N) "
+  read -r response
+  if [ "$response" = "Y" ] || [ "$response" = "y" ]; then
+	cd "$HOME" || exit 1
+    curl -fsSLO https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+	cd - || exit 1
+  fi
+fi
+
 # Check installation on both Intel macOS /usr/local and ARM macOS /opt/homebrew
 if [ ! -f /opt/homebrew/bin/brew ]; then
   echo "Homebrew is not installed."
