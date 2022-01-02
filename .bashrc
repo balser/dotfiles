@@ -88,7 +88,7 @@ fi
 
 . "$HOME/.git-completion.bash"
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/opt/homebrew/bin/vim
 export VIM_UNDO=~/.vim/undo
 [ -d $VIM_UNDO ] || mkdir -p $VIM_UNDO
 
