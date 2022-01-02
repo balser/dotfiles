@@ -24,3 +24,11 @@ if [ ! -d "$HOME"/.dotfiles ]; then
     cd - || exit 1
   fi
 fi
+
+# Install my brews
+# These are stored in `~/.Brewfile`, which is a symlink into `.dotfiles`.
+printf "Run Homebrew? (Y/N) "
+read -r response
+if [ "$response" = "Y" ] || [ "$response" = "y" ]; then
+  brew bundle --global install
+fi
