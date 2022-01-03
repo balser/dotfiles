@@ -4,9 +4,6 @@ case $- in
       *) return;;
 esac
 
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 HISTSIZE=10000
