@@ -9,13 +9,17 @@ tap "homebrew/core"
 # Most things
 brew "ack"
 brew "glide"
-brew "go"
 brew "jq"
 brew "pstree"
 brew "trash"
 brew "tree"
 brew "vim"
 brew "wget"
+
+# languages
+brew "go"
+brew "rust"
+brew "rustfmt"
 
 # Version control
 brew "git"
