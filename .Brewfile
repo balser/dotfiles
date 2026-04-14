@@ -18,8 +18,6 @@ brew "wget"
 
 # languages
 brew "go"
-brew "rust"
-brew "rustfmt"
 
 # Version control
 brew "git"
