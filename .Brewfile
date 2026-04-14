@@ -21,6 +21,7 @@ brew "go"
 
 # Version control
 brew "git"
+brew "gh"
 
 # Modern command-line utils
 # Mostly prefixed with 'g', e.g. gsha1sum, gtelnet
