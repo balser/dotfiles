@@ -3,8 +3,6 @@
 #  $ brew bundle --global cleanup --force
 
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 
 # Most things
 brew "ack"
